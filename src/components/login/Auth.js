@@ -5,10 +5,7 @@ import Link from "next/link";
 // import FacebookLogin from "./FacebookLogin";
 
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Nav from 'react-bootstrap/Nav';
 import { useInitFbSDK } from "../../hooks/fb-hooks"
-import { Button } from "react-bootstrap";
 const PAGE_ID = "101640222920468";
 
 const Auth = () => {
@@ -76,8 +73,9 @@ const Auth = () => {
   // Fetch User Details
   async function fetchUserDetails(userToken) {
     try {
-      window.FB.api(`/me?fields=id,name,location&access_token=${userToken}`, (response) => {
-        console.log("User Details", response);
+      window.FB.api(`/me?fields=id,name,email&access_token=${userToken}`, (response) => {
+        setUserData(response);
+        console.log("User Details data", userData);
       })
     } catch (error) {
       console.log("Error details", error);
@@ -135,18 +133,34 @@ const Auth = () => {
                 </div>
                 <div className="row">
                   <div className="col-md-6">
-                  <h4 className="mb-4">Pages List</h4>
+                  <h4 className="mb-4">Page List</h4>
                   {
-                    pageList 
+                    pageList // https://a987-49-249-113-186.ngrok-free.app/
                     ?
                     <ul className="list-group">
                       {
                         pageList.map((page, idx) => {
                           return(
-                            <li className="list-group-item">{page.name}</li>
+                            <li className="list-group-item">
+                              <span className="d-block">Page Name: {page.name}</span>
+                              <span className="d-block">Page Category: {page.category}</span>
+                            </li>
                           )
                         })
                       }
+                    </ul>  
+                    :
+                    ""
+                  }
+                  </div>
+                  <div className="col-md-6">
+                  <h4 className="mb-4">User Details</h4>
+                  {
+                    userData // https://a987-49-249-113-186.ngrok-free.app/
+                    ?
+                    <ul className="list-group">
+                      <li className="list-group-item">Name: {userData.name}</li>
+                      <li className="list-group-item">Email: {userData.email}</li>
                     </ul>  
                     :
 
@@ -177,9 +191,7 @@ const Auth = () => {
                     </span>
                     <div className={styles.socials}>
                       <button className={styles.socialButtons}>Google</button>
-                      <button onClick={logInToFB} className="primaryButton">
-                        Login with Facebook
-                      </button>
+                      <button onClick={logInToFB} className="primaryButton">Facebook</button>
                       <button className={styles.socialButtons}>Apple</button>
                     </div>
                   </div>
