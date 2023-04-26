@@ -1,0 +1,223 @@
+.mainContainer{
+    padding: 0 20px;
+    padding-top: 56px;
+}
+
+.contentLeft{
+    position: fixed;
+    left: 20px;
+    top: 56px;
+    width: 350px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+
+.ContentRight{
+    margin-left: 350px;
+    padding: 20px 20px;
+}
+
+.WhiteBox{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.WhiteBoxHeder{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+
+.WhiteBoxHeder h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.currencyType{
+    border-radius: 24px;
+    height: auto;
+    padding: 4px 12px;
+    font-size: 13px;
+    line-height: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #8f99a3;
+}
+
+
+.internalAcIfo h4{
+    font-size: 48px;
+    line-height: 60px;
+    color: #000;
+    margin: 20px 0;
+}
+
+
+.internalMetaWrapper{
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.internalMetaWrapper > * {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.internalMetaBoxKey{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #8f99a3;
+    margin-bottom: 5px;
+}
+
+.internalMetaBoxValue{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #202427;
+}
+
+.tarrifCard{
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.tarrifContent{
+    position: relative;
+    flex: 1;
+}
+
+.tarrifIcon{
+    margin-right: 10px;
+}
+.tarrifIcon > img{
+    width: 40px;
+}
+
+.tarrifContent button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tarrifContent p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ngPayTabHeader{
+    margin-bottom: 20px;
+}
+
+.ngPayTabs{
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.ngPayTabLink{
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600 !important;
+    color: #202427 !important;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.ngPayTabLink:hover{
+    background-color: #fff;
+    color: #202427 !important;
+}
+
+.transactionsItem{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 12px 20px;
+    border: 1px solid #edf0f3;
+    cursor: pointer;
+    transition: 0.3 all ease;
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 20px;
+}
+
+.transactionsItem:last-child{
+    margin-bottom: 0;
+}
+
+.transactionsTime{
+    position: absolute;
+    left: 20px;
+    top: 12px;
+}
+
+.transactionsTime > span:first-child{
+    display: block;
+    font-size: 14px;
+    color: #202427;
+    font-weight: 600;
+}
+
+.transactionsTime > span:last-child{
+    display: block;
+    font-size: 14px;
+    color: #5c6670;
+}
+
+.transactionsDetails{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    align-items: center;
+}
+
+.transactionsDetailsLeft{
+    margin-right: 15px;
+}
+
+.transactionsDetailsLeft > img{
+    width: 40px;
+}
+
+.transactionsDetailsCenter{
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 1 auto;
+    align-self: center;
+}
+
+
+.transactionsDetailsRight{
+    display: flex;
+    justify-content: flex-end;
+    min-width: 130px;
+}
+
+.transactionsDetailsCenter h4,
+.transactionsDetailsRight h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.njPrepaymentCard{
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #00c99b;
+}
+.njPrepaymentCard .njPreview{
+    align-items: center;
+}
+.njPrepaymentCard .njPreviewLeft img{
+    width: 56px;
+    height: 56px;
+}

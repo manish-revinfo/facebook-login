@@ -1,0 +1,238 @@
+.layoutContainer {
+  max-width: 1192px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 24px 8px;
+}
+.layoutContainerBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.layoutMain{
+overflow: hidden;
+background: rgb(0, 189, 126);
+background: linear-gradient(
+  328deg,
+  rgba(0, 189, 126, 0.31985294117647056) 0%,
+  rgba(0, 201, 155, 0.15458683473389356) 50%,
+  rgba(255, 255, 255, 1) 100%
+);
+}
+.layoutContainer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgb(221,246,238);
+  background: linear-gradient(180deg, rgba(221,246,238,0) 0%, rgba(221,246,238,0.71) 100%);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  top: 520px;
+  right: 0;
+  width: 636px;
+  height: 463px;
+}
+.layoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 64px;
+}
+.logo {
+  max-width: 160px;
+}
+.layoutInnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+}
+.landingMainTop {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.landingMainTopLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.landingMainTitle {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.landingMainList {
+  padding: 0;
+  margin: 32px 0;
+  list-style: none;
+  text-align: center;
+}
+.landingMainList > li {
+  padding-bottom: 12px;
+}
+.landingMainListItem {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-flex;
+  max-width: 100%;
+  width: 100%;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #202427;
+  display: inline;
+}
+.landingMainList > li .landingMainListItem:before {
+  content: "• ";
+}
+.landingMainListItemSpan {
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+  max-width: 640px;
+}
+.landingMainTopRight > img {
+  max-width: 100%;
+  width: 311px;
+  height: 397px;
+  margin-bottom: 32px;
+}
+
+.landingMainDownload > img {
+  display: none;
+}
+.landingDownloadButtonsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.landingDownloadTitle {
+  display: inline-flex;
+  max-width: 100%;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  justify-content: flex-start;
+  text-align: left;
+  color: #202427;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 12px !important;
+}
+.landingDownloadButtons {
+  display: flex;
+  margin-top: auto;
+}
+.landingMainTopRight {
+  text-align: center;
+}
+.landingMainDownload {
+  display: flex;
+  justify-content: center;
+}
+.landingMainBottom {
+  text-align: center;
+  padding-top: 32px;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: Inter, sans-serif;
+}
+.languageSelectorDropDown >button{
+  border: none;
+  background: none;
+}
+/* media query */
+@media (min-width: 375px) {
+  .layoutContainer:after {
+    right: 0;
+  }
+}
+@media (min-width: 480px) {
+  .landingMainTopRight > img {
+    max-width: 465px;
+  }
+  .layoutContainer:after {
+    right: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .layoutContainer:after {
+    right: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .layoutContainer{
+    min-height: 100vh;
+    padding: 24px 32px;
+    padding-bottom: 15%;
+  }
+  .landingMainTop {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .layoutContainer:after {
+    top: 50px;
+    right: -200px;
+    width: 880px;
+    height: 640px;
+}
+  .landingMainTopLeft {
+    display: block;
+    width: 560px;
+    margin-bottom: 0;
+  }
+  .landingMainTitle {
+    text-align: left;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 700;
+    padding-right: 10px;
+  }
+  .layoutHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .landingMainList {
+    text-align: left;
+  }
+  .landingMainDownload > img {
+    max-width: 465px;
+    margin-right: 16px;
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .landingMainDownload {
+    justify-content: space-between;
+    width: 360px;
+  }
+  .landingMainBottom {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .landingMainTopRight > img {
+    width: 420px;
+    height: 525px;
+  }
+}

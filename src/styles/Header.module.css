@@ -1,0 +1,11 @@
+.dashHeader{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 12px 0;
+}
+
+.brandLogo > img{
+    max-width: 150px;
+}
