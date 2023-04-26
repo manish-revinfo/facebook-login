@@ -16,19 +16,21 @@ const injectFbSDKScript = () => {
 
 export const useInitFbSDK = () => {
   const [isInitialized, setIsInitialized] = React.useState(false);
-  window.fbAsyncInit = function () {
-    window.FB.init({
-      appId: "6049899188464975",
-      cookie: true,
-      xfbml: true,
-      version: "v16.0",
-    });
+  if (typeof window !== "undefined") {
+    window.fbAsyncInit = function () {
+      window.FB.init({
+        appId: "6049899188464975",
+        cookie: true,
+        xfbml: true,
+        version: "v16.0",
+      });
+  
+      window.FB.AppEvents.logPageView();
+      setIsInitialized(true);
+    };
 
-    window.FB.AppEvents.logPageView();
-    setIsInitialized(true);
-  };
-
-  injectFbSDKScript();
-
-  return isInitialized;
+    injectFbSDKScript();
+  
+    return isInitialized;
+  }
 };

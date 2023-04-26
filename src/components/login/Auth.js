@@ -6,12 +6,14 @@ import Link from "next/link";
 
 import React, { useEffect, useState } from "react";
 import { useInitFbSDK } from "../../hooks/fb-hooks"
+
+// import { initFacebookSdk } from "../../hooks/fb-hooks";
 const PAGE_ID = "101640222920468";
 
 const Auth = () => {
 
   // Initializes the Facebook SDK
-  const isFbSDKInitialized = useInitFbSDK();
+  let isFbSDKInitialized = useInitFbSDK();
 
   // App state
   const [fbUserId, setFbUserId] = React.useState();
